@@ -1,0 +1,153 @@
+/*
+GENERAL STYLING
+================================================ */
+html {
+  font-size: 100%;
+}
+
+body {
+  color: #555;
+  font-family: sans-serif;
+}
+
+/*
+COMMON
+================================================ */
+.title {
+  font-family: "Dancing Script", cursive;
+  font-size: 7rem;
+  margin-bottom: 2rem;
+}
+
+p {
+  line-height: 1.7;
+  font-size: 1.125rem;
+}
+
+/*
+SCROLL_SNAP
+================================================ */
+.container {
+  overflow: auto;
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+}
+
+section {
+  height: 100vh;
+  scroll-snap-align: start;
+
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+/*
+HERO
+================================================ */
+
+.hero {
+  background-image: url(../images/bread1.jpg);
+
+  padding-top: 10vh;
+  text-align: center;
+}
+
+/*
+MENU
+================================================ */
+
+.menu {
+  background-image: url(../images/bread2.jpg);
+
+  display: flex;
+  align-items: center;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 900px;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+.menu-list tr {
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.7;
+}
+
+.menu-list th {
+  font-weight: normal;
+}
+
+.menu-list td {
+  padding-left: 1rem;
+}
+
+/*
+CONTACT
+================================================ */
+.contact {
+  background-image: url(../images/cafe.jpg);
+
+  text-align: center;
+  padding-top: 10vh;
+}
+
+.btn {
+  background-color: #555;
+  color: #fff;
+  padding: 1rem 3.5rem;
+  border-radius: 6px;
+  font-size: 1.5rem;
+
+  display: inline-block;
+  margin: 2rem 0 2.25rem;
+}
+
+.btn:hover {
+  background-color: #777;
+}
+
+.contact-sns {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-sns a {
+  display: inline-block;
+
+  padding: 0.75rem 0 0 0.125rem;
+  font-size: 2rem;
+  color: #555;
+
+  background-color: #fff;
+  border-radius: 50%;
+  width: 3.75rem;
+  height: 3.75rem;
+
+  margin: 0 0.5rem;
+}
+
+.contact-sns a:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/*
+MEDIA QUERY
+================================================ */
+@media (max-width: 700px) {
+  .title {
+    font-size: 4rem;
+  }
+
+  p {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .hero {
+    padding-top: 12vh;
+  }
+}
