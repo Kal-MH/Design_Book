@@ -1,0 +1,374 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Poiret+One');
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+
+body{
+	width: 100px;
+	height: 100vh;
+	overflow: hidden;
+	background-color: #b1e1e2;
+	animation: sky 20s linear infinite;
+}
+
+.title {
+	width: 1000px;
+	height: auto;
+	position: absolute;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%, 150%);
+}
+
+section {
+	width: 1000px;
+	height: 400px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -70%);
+}
+
+/* 하늘 */
+section .sky {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+section .sky .sun {
+	position: absolute;
+	top: -150px;
+	left: 50%;
+	margin-left: -100px;
+	transform-origin: center 500px;
+	animation: sun 20s linear infinite;
+}
+
+section .sky .cloud1 {
+	position: absolute;
+	top: -30px;
+	left: 10%;
+	animation: flow linear 20s infinite;
+}
+
+section .sky .cloud2 {
+	position: absolute;
+	top: 20px;
+	left: 0%;
+	animation: flow linear 20s infinite;
+}
+
+/* 마을 */
+section .town .circle {
+	position: absolute;
+	bottom: 104px;
+	left: 50%;
+	margin-left: -165px;
+	opacity: 0.7;
+	animation: rotation 20s linear infinite;
+}
+
+section .town .night {
+	position: absolute;
+	bottom: 0px;
+	left: 40px;
+}
+
+section .town .day {
+	position: absolute;
+	bottom: 0px;
+	left: 40px;
+	animation: day linear 20s infinite;
+}
+
+/* 사람 */
+section .people {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	animation: day linear 20s infinite;
+}
+
+section .people .man {
+	position: absolute;
+	bottom: 0px;
+	right: 200px;
+	transform: scaleX(-1);
+	animation: flow-left-right linear 20s infinite;
+}
+
+section .people .family {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	animation: flow linear 20s infinite;
+}
+
+/* animations */
+
+/* sky */
+@keyframes sky {
+	0%{ background-color: #b08fcc;}
+	25%{ background-color: #b1e1e2;}
+	50%{ background-color: #fcd2e2;}
+	75%{ background-color: #636888;}
+	100%{ background-color: #b08fcc;}
+}
+
+/* circle */
+@keyframes rotation {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+/* day */
+@keyframes day {
+	0% { opacity: 0; }
+	25% { opacity: 1; }
+	50% { opacity: 1; }
+	75% { opacity: 0; }
+	100% { opacity: 0; }
+}
+
+/* sun */
+@keyframes sun {
+	0% { opacity: 0; transform: rotate(-90deg);}
+	25% { opacity: 1; transform: rotate(-30deg); }
+	50% { opacity: 1; transform: rotate(30deg);}
+	75% { opacity: 0; transform: rotate(90deg);}
+	100% { opacity: 0; transform: rotate(-90deg);}
+}
+
+/* flow */
+@keyframes flow {
+	0% { left: 0%; opacity: 0; }
+	10% { opacity: 1; }
+	80% { opacity: 1; }
+	100% { left: 90%; opacity: 0; }
+}
+
+@keyframes flow-left-right {
+	0% { right: 0%; opacity: 0; }
+	10% { opacity: 1; }
+	80% { opacity: 1; }
+	100% { right: 90%; opacity: 0; }
+}
+
+.one {
+	width: 1000px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, 150%);
+	font: 24px/1 "Poiret One";
+	color: #fff;
+	text-align: center;
+	opacity: 0;
+	animation: fadeInUp 0.5s linear 0.3s forwards;
+}
+
+@keyframes fadeInUp {
+	0% {
+		opacity: 0;
+		transform: translate(-50%, 180%);
+	}
+	100% {
+		opacity: 1;
+		transform: translate(-50%, 150%);
+	}
+}
+
+.two {
+	width: 1000px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, 260%);
+	font: 24px/1 "Poiret One";
+	color: #fff;
+	text-align: center;
+	opacity: 0;
+	animation: fadeInUp-two 0.5s linear 0.6s forwards;
+}
+
+@keyframes fadeInUp-two {
+	0% {
+		opacity: 0;
+		transform: translate(-50%, 300%);
+	}
+	100% {
+		opacity: 1;
+		transform: translate(-50%, 260%);
+	}
+}
+
+.three {
+	width: 1000px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, 410%);
+	font: 24px/1 "Poiret One";
+	color: #fff;
+	text-align: center;
+	opacity: 0;
+	animation: fadeInUp-three 0.5s linear 2s forwards;
+}
+
+@keyframes fadeInUp-three {
+	0% {
+		opacity: 0;
+		transform: translate(-50%, 440%);
+	}
+	100% {
+		opacity: 1;
+		transform: translate(-50%, 410%);
+	}
+}
+
+.four {
+	width: 1000px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, 520%);
+	font: 24px/1 "Poiret One";
+	color: #fff;
+	text-align: center;
+	opacity: 0;
+	animation: fadeInUp-four 0.5s linear 3.5s forwards;
+}
+
+@keyframes fadeInUp-four {
+	0% {
+		opacity: 0;
+		transform: translate(-50%, 550%);
+	}
+	100% {
+		opacity: 1;
+		transform: translate(-50%, 520%);
+	}
+}
+
+.five {
+	width: 1000px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, 630%);
+	font: 24px/1 "Poiret One";
+	color: #fff;
+	text-align: center;
+	opacity: 0;
+	animation: fadeInUp-five 0.5s linear 3.8s forwards;
+}
+
+@keyframes fadeInUp-five {
+	0% {
+		opacity: 0;
+		transform: translate(-50%, 660%);
+	}
+	100% {
+		opacity: 1;
+		transform: translate(-50%, 630%);
+	}
+}
+
+.six {
+	width: 1000px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, 740%);
+	font: 24px/1 "Poiret One";
+	color: #fff;
+	text-align: center;
+	opacity: 0;
+	animation: fadeInUp-six 0.5s linear 4.8s forwards;
+}
+
+@keyframes fadeInUp-six {
+	0% {
+		opacity: 0;
+		transform: translate(-50%, 770%);
+	}
+	100% {
+		opacity: 1;
+		transform: translate(-50%, 740%);
+	}
+}
+
+.seven {
+	width: 1000px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, 850%);
+	font: 24px/1 "Poiret One";
+	color: #fff;
+	text-align: center;
+	opacity: 0;
+	animation: fadeInUp-seven 0.5s linear 7s forwards;
+}
+
+@keyframes fadeInUp-seven {
+	0% {
+		opacity: 0;
+		transform: translate(-50%, 880%);
+	}
+	100% {
+		opacity: 1;
+		transform: translate(-50%, 850%);
+	}
+}
+
+.bottom-bar {
+	width: 1000px;
+	height: 100px;
+	background-color: antiquewhite;
+	position: absolute;
+	opacity: 0;
+	bottom: 0%;
+	animation: bounceInUp 0.5s linear 7.3s forwards;
+}
+
+@keyframes bottom {
+	0% {
+		opacity: 0;
+		transform: translateY(40%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0%);
+	}
+}
+
+@keyframes bounceInUp {
+	0% {
+	   opacity: 0;
+	   transform: translateY(500%);
+	}
+	60% {
+	   opacity: 1;
+	   transform: translateY(5%);
+	}
+	80% {
+		opacity: 1;
+	   transform: translateY(25%);
+	}
+	100% {
+		opacity: 1;
+	   transform: translateY(0);
+	}
+ } 
